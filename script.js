@@ -1,5 +1,11 @@
 const inputBox=document.getElementById("input-box");
 const listContainer=document.getElementById("list-container");
+inputBox.addEventListener('keypress',function(e){
+    if(e.key==='Enter'){
+        e.preventDefault();
+        document.getElementById("btn").click();
+    }
+})
 
 function addTask(){
     if(inputBox.value===''){
